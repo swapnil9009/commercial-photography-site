@@ -1,0 +1,321 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0%;
+}
+/* headeer */
+
+
+
+header{
+  height: 100vh;
+  background-image: linear-gradient(rgba( 0,0,0, .4), rgba(0,0,0, .5)),url(images/header-img.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+/*navbar */
+.navbar-menu{
+  background: linear-gradient(rgba(0,0,0, .3),rgba(0,0,0, .5));
+  padding: 10px;
+}
+.menu-item{
+  font-size: 15px;
+  letter-spacing: 1px;
+  transition: color .5s;
+}
+.menu-item:hover{
+  color: peru;
+  
+}
+.line1, .line2, .line3{
+  width: 23px;
+  height: 3px;
+  margin: 5px;
+  transition: all .4s;
+}
+.change .line1{
+  transform: rotate(-45deg) translate(-5px,6px);
+}
+.change .line2{
+  opacity: 0;
+}
+.change .line3{
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+.show{
+  display: block;
+  
+  
+}
+
+
+/* end of navbar */
+
+
+
+/* banner */
+.banner{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+}
+.banner-h1{
+  animation-name: anim;
+  animation-duration: 2s;
+}
+.banner-paragraph{
+  animation-name: anim;
+  animation-duration: 2s;
+  animation-delay: .5s;
+  animation-fill-mode: backwards;
+}
+@keyframes anim {
+  0%{
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* end of banner */
+
+/* end of headeer */
+
+/* mission */
+
+.underline{
+  width: 150px;
+  border: 3px solid black;
+  margin: auto;
+  border-radius: 5px;
+}
+@keyframes camera {
+  0%{
+    transform: translateX(-130px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes camera-text {
+  0%{
+    transform: translateX(40px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.from-right{
+  animation-name: camera-text;
+  animation-duration: 3s;
+}
+.from-left{
+  animation-name: camera;
+  animation-duration: 3s;
+}
+/* end of mission */
+
+
+ /* collection */
+
+ .underline2{
+  width: 150px;
+  border: 3px solid white;
+  margin: auto;
+  border-radius: 5px;
+}
+.card-shadow{
+  box-shadow: 5px 8px 16px black;
+}
+.heading{
+  position: absolute;
+  top: 70%;
+  right: 0;
+  background: black;
+  width: 70%;
+  cursor: pointer;
+  opacity: .7;
+  transition: all .5s;
+}
+.heading:hover{
+  opacity: 1;
+}
+ /* end of collection */
+
+ /* gallery */
+
+.gallery-list-item{
+  color: #777;
+  cursor: pointer;
+  user-select: none;
+  transition: all .5s;
+}
+.active{
+  color: darkgoldenrod;
+  
+}
+
+ /* end of galery */
+
+ /* customers */
+
+.customers{
+  background-color: gainsboro;
+}
+ /* end of customers */
+
+
+ /* pricing */
+
+.card-1, .card-2, .card-3 {
+  background-image: url(images/pricing-card-bg.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 0;
+  box-shadow: 2px 5px 16px black;
+  max-width: 300px;
+}
+.movefromleft{
+  animation-name: movefromleft;
+  animation-duration: 2s;
+}
+.movefromright{
+  animation-name: movefromright;
+  animation-duration: 2s;
+}
+.movefrombottom{
+  animation-name: movefrombottom;
+  animation-duration: 2s;
+}
+@keyframes movefromleft{
+  0%{
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes movefromright{
+  0%{
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes movefrombottom{
+  0%{
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+ /* end of pricing */
+
+ /* contact */
+
+ .contact{
+   background: linear-gradient(105deg,rgba(21,31,32,1) 0%,rgba(21,31,32,.95) 50%, transparent 50%),url(images/form-img.jpeg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+ }
+ .input{
+   background: transparent;
+   border-color: transparent;
+   border-bottom: 2px solid #ccc;
+   border-radius: 0;
+   transition: all .8s;
+ }
+ .input:focus{
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  color: #fff;
+  border-bottom: 2px solid brown;
+
+ }
+ .submit-button{
+   background: brown;
+   color: #eee;
+   transition: all .3s;
+ }
+ .submit-button:hover{
+   background: black;
+   color: blanchedalmond;
+   transform: translateY(-3px);
+ }
+ .label{
+   color: #777;
+   display: block;
+   margin-top: -70px;
+   margin-left: 4px;
+   font-size: 13px;
+   transition: all .3s;
+ }
+
+ .input:placeholder-shown + .label {
+   transform: translate(20px, 20px);
+   opacity: 0;
+   visibility: hidden;
+ }
+
+ @media (max-width:992px){
+   .contact{
+     background: linear-gradient(rgba(21,31,32,1), rgba(21,31,32,.95));
+   }
+   .contact-form{
+     width: 80%;
+     margin: auto;
+   }
+ }
+ /* end of contact */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
